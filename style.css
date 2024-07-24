@@ -1,0 +1,116 @@
+/* 5754ecb3 */
+:root{
+    --porpule-bg : #5754ecb3;
+    --black-bg : #2b2b2bcc;
+    --porple-hover : #5754ec;
+    --green-hover : #1c7a1c;
+    --white : #ffffff;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* .container{
+    width: 100vw;
+    height: 100vh;
+} */
+.section-container{
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;    
+    text-align: center;
+}
+.left{
+    left : 0;
+    background-image: url(Image/ps.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.left::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 100vh;
+    background-color: var(--porpule-bg);
+}
+.right::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    right: 0;
+    height: 100vh;
+    background-color: var(--black-bg);
+}
+
+.right{
+    right: 0;
+    background-image: url(Image/xbox.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1{
+    position:absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4rem;
+    white-space: nowrap;
+}
+.btn,
+h1,
+.left,
+.right{
+    transition: width 1s ease-in;
+}
+.btn{
+    position:absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    font-weight: bold;
+    white-space: nowrap;
+    color: var(--white);
+    text-decoration: none;
+    border: 3.5px solid var(--white);
+    padding: 25px 70px;
+
+    transition: none;
+}
+.left-hover .left{
+    width: 75%;
+}
+.left-hover .right{
+    width: 25%;
+}
+.right-hover .left{
+    width: 25%;
+}
+.right-hover .right{
+    width: 75%;
+}
+.left .btn:hover{
+    background-color: var(--porple-hover);
+    border: 3.5px solid var(--porple-hover);
+    transition: none;
+}
+.right .btn:hover{
+    background-color: var(--green-hover);
+    transition: none;
+    border: 3.5px solid var(--green-hover);
+}
+@media(max-width : 800px){
+    .btn{
+        padding: 20px 55px;
+        top: 40%;
+    }
+    h1{
+        font-size: 2rem;
+    }
+}
